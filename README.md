@@ -1,2 +1,2 @@
 # kfd_hw_02
-I think its great!
+Hi! I using abstract class on Kotlin. In my program I also using interfaces and data class, nullable Types.
