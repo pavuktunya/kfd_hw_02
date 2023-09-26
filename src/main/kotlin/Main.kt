@@ -25,6 +25,9 @@ class MolniaMakvin:Transport(){
         println("KCHAY")
     }
 }
+class Trolley:Transport(){
+    override val Power: Double = 200000.9
+}
 class Train:Transport(){
     override val Power = 5.8
     final override fun Move(startPlace:Vector3, finishPlace:Vector3):Double{
@@ -64,9 +67,11 @@ fun main(args: Array<String>) {
     println("1 -> Bus")
     println("2 -> Train")
     println("3 -> MolniaMakvin")
+    println("4 -> Trolley")
+
     var number:Int? =readln().toIntOrNull()
 
-    while (number !in 1..3){
+    while (number !in 1..4){
         println("Are you okay, bro?")
         println("Try again:")
         number =readln().toIntOrNull()
@@ -75,6 +80,7 @@ fun main(args: Array<String>) {
         1->Bus()
         2->Train()
         3->MolniaMakvin()
+        4->Trolley()
         else -> MolniaMakvin()
     }
     transport.info()
